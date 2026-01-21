@@ -1,12 +1,19 @@
-# 📝 data_ml — Создание requirements.txt
+# 📝 data_ml — Creating requirements.txt / Erstellung von requirements.txt
 
-Инструкция для создания файла `requirements.txt` из окружения `data_ml` в Anaconda (Windows).
+Instruction for creating a `requirements.txt` file from the `data_ml` environment in Anaconda (Windows).
+Anleitung zum Erstellen einer `requirements.txt`-Datei aus der Umgebung `data_ml` in Anaconda (Windows).
 
 ---
 
-## 1️⃣ Открой Anaconda Prompt
+## 1️⃣ Open Anaconda Prompt / Anaconda Prompt öffnen
 
-Убедись, что ты видишь строку с базой, например:
+Make sure you see the base environment, for example:
+
+```
+(base) C:\Users\...
+```
+
+Stelle sicher, dass die Basisumgebung sichtbar ist, z. B.:
 
 ```
 (base) C:\Users\...
@@ -14,37 +21,49 @@
 
 ---
 
-## 2️⃣ Активируй окружение `data_ml`
+## 2️⃣ Activate `data_ml` environment / Aktivieren der Umgebung `data_ml`
 
 ```bash
 conda activate data_ml
 ```
 
-После этого строка должна выглядеть так:
+After this, the prompt should look like:
 
 ```
 (data_ml) C:\Users\...
 ```
 
-Это значит, что все команды будут выполняться в правильном окружении.
+Dies bedeutet, dass alle Befehle in der richtigen Umgebung ausgeführt werden.
 
 ---
 
-## 3️⃣ Перейди в папку проекта (опционально)
+## 3️⃣ Navigate to your project folder (optional) / Wechsle in den Projektordner (optional)
 
-Рекомендуется создавать `requirements.txt` прямо в папке проекта, чтобы потом использовать его для GitHub или коллег.
+It is recommended to create `requirements.txt` directly in the project folder so it can be used for GitHub or shared with colleagues.
 
 ```bash
 cd C:\Users\UserS2025\Projects\data_ml_project
 ```
 
-Проверь, что текущая директория правильная:
+Check the current directory:
 
 ```bash
 cd
 ```
 
-или
+or
+
+```bash
+dir
+```
+
+Überprüfe das aktuelle Verzeichnis:
+
+```bash
+cd
+```
+
+oder
 
 ```bash
 dir
@@ -52,28 +71,41 @@ dir
 
 ---
 
-## 4️⃣ Создай файл requirements.txt
+## 4️⃣ Create the requirements.txt file / Erstellen der requirements.txt Datei
 
 ```bash
 pip freeze > requirements.txt
 ```
 
-Что происходит:
+What happens / Was passiert:
 
-* `pip freeze` — выводит все установленные пакеты с точными версиями
-* `> requirements.txt` — записывает этот список в файл `requirements.txt`
+* `pip freeze` — outputs all installed packages with exact versions / gibt alle installierten Pakete mit exakten Versionen aus
+* `> requirements.txt` — writes this list to `requirements.txt` / schreibt diese Liste in `requirements.txt`
 
-После выполнения файла **станет видно в текущей папке проекта**.
+The file will appear in the **current project folder** / Die Datei wird im **aktuellen Projektordner** erstellt.
 
 ---
 
-## 5️⃣ Проверка файла
+## 5️⃣ Check the file / Datei prüfen
 
 ```bash
 dir requirements.txt
 ```
 
-Открой файл блокнотом или любым редактором, там должно быть примерно:
+Open the file with Notepad or any editor. It should look like:
+
+```
+numpy==1.25.2
+pandas==2.1.0
+matplotlib==3.8.0
+seaborn==0.13.2
+scikit-learn==1.3.0
+scipy==1.12.0
+jupyter==1.0.0
+ipykernel==6.27.0
+```
+
+Öffne die Datei mit Notepad oder einem Editor. Sie sollte etwa so aussehen:
 
 ```
 numpy==1.25.2
@@ -88,24 +120,24 @@ ipykernel==6.27.0
 
 ---
 
-## 6️⃣ Использование requirements.txt на другом компьютере
+## 6️⃣ Using requirements.txt on another computer / Verwendung von requirements.txt auf einem anderen Rechner
 
-Чтобы создать такое же окружение на другой машине:
+To recreate the same environment on another machine:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-✅ Все пакеты будут установлены с теми же версиями, что и в твоём `data_ml`.
+✅ All packages will be installed with the same versions as in your `data_ml` environment / Alle Pakete werden mit denselben Versionen wie in deiner `data_ml` Umgebung installiert.
 
 ---
 
-## 💡 Совет
+## 💡 Tip / Tipp
 
-* Делай `pip freeze > requirements.txt` после установки всех нужных библиотек и перед загрузкой проекта на GitHub.
-* Если добавляешь новые библиотеки, **обновляй** requirements.txt той же командой.
+* Run `pip freeze > requirements.txt` after installing all needed libraries and before uploading the project to GitHub / Führe `pip freeze > requirements.txt` aus, nachdem alle benötigten Bibliotheken installiert wurden und bevor du das Projekt auf GitHub hochlädst.
+* If you add new libraries, **update** the requirements.txt with the same command / Wenn du neue Bibliotheken hinzufügst, **aktualisiere** die requirements.txt mit demselben Befehl.
 
 ---
 
-📌 Файл можно сохранить как `data_ml_Requirements_Instructions.md` и держать в корне проекта.
+📌 Save this file as `data_ml_Requirements_Instructions.md` and keep it in the root of your project / Speichere diese Datei als `data_ml_Requirements_Instructions.md` und lege sie in das Stammverzeichnis des Projekts.
 
